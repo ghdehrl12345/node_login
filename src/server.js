@@ -1,5 +1,5 @@
 import express from "express";
-import helmet from "from";
+import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
 
@@ -18,7 +18,7 @@ app.get("/", (req,res) => {
     if (pass === "1010") {
         res.render("result", {recieveData : id });
     } else {
-        res.render("main", {recieveData : "비밀번호가 올바르지 않습니다."});
+        res.render("login", {recieveData : "비밀번호가 올바르지 않습니다."});
     }
 });
 
