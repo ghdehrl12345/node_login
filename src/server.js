@@ -11,7 +11,7 @@ app.use(helmet());
 app.use(morgan(`dev`));
 app.use(express.static(path.join(__dirname,"/assets")));
 
-app.get("/", (req,res) => {
+app.get("/result", (req,res) => {
     const id = req.query.id;
     const pass = req.query.pass;
 
