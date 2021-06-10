@@ -10,6 +10,9 @@ app.set("view engine" ,"pug");
 app.use(helmet());
 app.use(morgan(`dev`));
 app.use(express.static(path.join(__dirname,"/assets")));
+app.get("/", (req, res) =>{
+    res.render("login");
+});
 
 app.get("/result", (req,res) => {
     const id = req.query.id;
